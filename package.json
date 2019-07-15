@@ -15,7 +15,7 @@
     "build": "npm run build-index && npm run build-getters && npm run build-servers",
     "copy-package": "cp package.json dist/package.json",
     "before_dist": "npm run cover && npm run coveralls",
-    "dist": "npm run build && cd dist && npm run copy-package",
+    "dist": "mkdir -p dist && npm run build && cd dist && npm run copy-package",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "lint-staged": {
