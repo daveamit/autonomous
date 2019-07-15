@@ -1,6 +1,6 @@
 {
   "name": "autonomous.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Configuration driven Autonomous api module",
   "main": "index.js",
   "scripts": {
