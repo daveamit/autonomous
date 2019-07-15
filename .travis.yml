@@ -1,0 +1,17 @@
+language: node_js
+node_js:
+- '6'
+- '6.1'
+- '5.11'
+- '4.6'
+after_success: npm run coveralls
+before_deploy:
+  - cd dist
+deploy:
+  provider: npm
+  email: daveamit@live.com
+  api_key:
+    secure: eu2AvrFfWMaHcmpZrVgNEE9Bv/aLpXFGhVeYclBWYM7+PQY+7617OzDVfk7tczPcnf2T5URKXdfWt8IZcBDirR7BBHUhuxtQxW1TY2YJPIiW+bRjN+I3zgJDxce3IQ3K0hK97vgCJCkkZ4iuHqypLpLDTE/2/uRWO7DW5++3tbfySh1gBtvpAWrUOCfLQbhXAE5y/30XK/EHm8talFLkrcyx4Kid5WAuRHrOHrp1kA13eiJAJXbTYYhoC8KI8gietwNM6thWv5IjhFnthWFJWvxSnnPG0Xv8L5pzEfGN/K+1/VCBs2/1dUkv4jFNM5pnjT2MbRJZbXOFt09fVJLMWLWHCjz2v1xnPCootZe3BnNBSOupTG5Sd4GInv9GiEmp+K8xwsIKpv0SLjTqJ1v6kDz/mB5wZcne61nRaCqHpyOO04b/+yqt3lSg1rbCC+N7i9cFCxeoPRAp8d/xI4IXP9jBhPcbi25VeMg9FXlbXtepu8MCKcIhPoPR0bJVQFoTPnf7OTDhpi/hmk6/XOHToOLZSaZ3oxEK8QFM6a11yycXMdzl/z9WQVCStbkrp94wlz002Un+qBIC+/8yEp8PfuCc+rNNLLhSHtQtwtEs0WLTtUriiXuvhApfBx3oz7r0toJKt0kS+NPPRkRxuYdU6Lrg2i0VEujCKyf1i3zYXyQ=
+  on:
+    tags: true
+    repo: daveamit/autonomous
