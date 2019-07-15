@@ -1,10 +1,9 @@
 language: node_js
 node_js:
+- '10'
+- '8'
 - '6'
-- '6.1'
-- '5.11'
-- '4.6'
-after_success: npm run coveralls
+after_success: npm run dist
 before_deploy:
   - cd dist
 deploy:
