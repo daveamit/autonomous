@@ -1,5 +1,5 @@
 {
-  "name": "autonomous",
+  "name": "autonomous.js",
   "version": "1.2.0",
   "description": "Configuration driven Autonomous api module",
   "main": "index.js",
@@ -14,7 +14,8 @@
     "build-index": "cross-env BABEL_ENV=commonjs babel ./index.js --out-dir dist",
     "build": "npm run build-index && npm run build-getters && npm run build-servers",
     "copy-package": "cp package.json dist/package.json",
-    "dist": "npm run cover && npm run coveralls && npm run build && cd dist && npm run copy-package",
+    "before_dist": "npm run cover && npm run coveralls",
+    "dist": "npm run build && cd dist && npm run copy-package",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
   },
   "lint-staged": {

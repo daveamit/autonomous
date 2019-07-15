@@ -3,7 +3,9 @@ node_js:
 - '10'
 - '8'
 - '6'
-after_success: npm run dist
+after_success: npm run before_dist && npm run dist
+before_deploy:
+- cd dist
 deploy:
   provider: npm
   email: daveamit@live.com
