@@ -16,7 +16,8 @@
     "copy-package": "cp package.json dist/package.json && cp README.md dist/README.md && cp LICENSE dist/LICENSE",
     "before_dist": "npm run cover && npm run coveralls",
     "dist": "mkdir -p dist && npm run build && cd dist && npm run copy-package",
-    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
+    "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls",
+    "clean": "rm -rf dist"
   },
   "lint-staged": {
     "*.js": [
