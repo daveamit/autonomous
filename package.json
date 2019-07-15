@@ -13,7 +13,7 @@
     "build-servers": "cross-env BABEL_ENV=commonjs babel ./servers --out-dir dist/servers",
     "build-index": "cross-env BABEL_ENV=commonjs babel ./index.js --out-dir dist",
     "build": "npm run build-index && npm run build-getters && npm run build-servers",
-    "copy-package": "cp package.json dist/package.json",
+    "copy-package": "cp package.json dist/package.json && cp README.md dist/README.md && cp LICENSE dist/LICENSE",
     "before_dist": "npm run cover && npm run coveralls",
     "dist": "mkdir -p dist && npm run build && cd dist && npm run copy-package",
     "coveralls": "cat ./coverage/lcov.info | ./node_modules/.bin/coveralls"
