@@ -1,0 +1,57 @@
+{
+  "name": "autonomous",
+  "version": "1.0.0",
+  "description": "Configuration driven Autonomous api module",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --require @babel/register",
+    "dev": "./node_modules/.bin/mocha --require @babel/register --watch",
+    "lint:eslint:fix": "eslint --ignore-path .gitignore --ignore-pattern internals/scripts --fix",
+    "lint:staged": "lint-staged",
+    "cover": "nyc --reporter=lcov --reporter=text-summary ./node_modules/.bin/mocha --require @babel/register"
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:eslint:fix",
+      "git add --force"
+    ],
+    "*.json": [
+      "prettier --write",
+      "git add --force"
+    ]
+  },
+  "pre-commit": "lint:staged",
+  "author": "daveamit",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.4.0",
+    "@babel/node": "^7.2.2",
+    "@babel/plugin-transform-runtime": "^7.5.0",
+    "@babel/preset-env": "^7.4.2",
+    "@babel/register": "^7.4.0",
+    "@istanbuljs/nyc-config-babel": "^2.1.1",
+    "babel-plugin-istanbul": "^5.1.4",
+    "chai": "^4.2.0",
+    "eslint": "^6.0.1",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.18.0",
+    "eslint-plugin-mocha": "^5.3.0",
+    "eslint-plugin-node": "^9.1.0",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "istanbul": "^0.4.5",
+    "lint-staged": "^9.1.0",
+    "mocha": "^6.1.4",
+    "moxios": "^0.4.0",
+    "nodemon": "^1.18.10",
+    "nyc": "^14.1.1",
+    "pre-commit": "^1.2.2",
+    "prettier": "^1.18.2",
+    "sinon": "^7.3.2"
+  },
+  "dependencies": {
+    "@babel/runtime": "^7.5.0",
+    "axios": "^0.19.0"
+  }
+}
