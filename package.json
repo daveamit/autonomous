@@ -59,7 +59,7 @@
     "eslint-plugin-standard": "^4.0.0",
     "istanbul": "^0.4.5",
     "lint-staged": "^9.1.0",
-    "mocha": "^6.1.4",
+    "mocha": "^10.2.0",
     "moxios": "^0.4.0",
     "nodemon": "^1.18.10",
     "nyc": "^14.1.1",
